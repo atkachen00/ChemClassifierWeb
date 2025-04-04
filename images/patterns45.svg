@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="670" height="390" viewBox="0 0 670 390">
+<g id="base_content" transform="translate(5,10)">
+
+  <defs>
+    <marker
+       id="ConcaveTriangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none" />
+    </marker>
+  </defs>
+  
+ 
+  <text
+     x="20.490171"
+     y="67.548546"
+     font-size="42.6667px"
+     text-anchor="middle"
+     dominant-baseline="baseline"
+     fill="#dc322f"
+     font-weight="bold">X:</text>
+  <text
+     x="15.095063"
+     y="193.80714"
+     font-size="42.6667px"
+     text-anchor="middle"
+     dominant-baseline="baseline"
+     fill="#3227ff"
+     font-weight="bold">Y:</text>
+  <text
+     x="19.425711"
+     y="325.172"
+     font-size="42.6667px"
+     text-anchor="middle"
+     dominant-baseline="baseline"
+     fill="#17b517"
+     font-weight="bold">Z:</text>
+  
+  <path
+     d="M 603.41557,1.0006072 121.8688,2.7229852 C 51.246348,2.9755762 44.837253,105.48382 119.82877,105.2156 l 336.5889,-1.20389 147.45446,-0.52739 C 673.28431,103.23605 684.19486,0.71169021 603.41557,1.0006072 Z"
+     fill="none"
+     stroke="#cc0009"
+     stroke-width="2"
+     id="path1-0" />
+  <path
+     d="m 603.20797,134.04659 -483.56388,1.72217 c -70.918283,0.25257 -77.354214,102.74848 -2.04858,102.4803 l 337.99881,-1.20375 148.07212,-0.52734 c 69.70294,-0.24824 80.65919,-102.76026 -0.45847,-102.47138 z"
+     fill="none"
+     stroke="#0c01c7"
+     stroke-width="2"
+     id="path1-0-9" />
+  <path
+     d="m 601.52212,263.65442 -480.73387,1.72234 c -70.503236,0.25259 -76.901512,102.75842 -2.03659,102.49021 l 336.0207,-1.20387 147.20555,-0.52739 c 69.29501,-0.24826 80.18714,-102.7702 -0.45579,-102.48129 z"
+     fill="none"
+     stroke="#01ad1f"
+     stroke-width="2"
+     id="path1-0-9-4" />
+
+</g>
+<g id="generated_content" transform="translate(70,0)">
+<circle cx="50.0" cy="65.0" r="40.00" fill="#8a2be2" stroke="black" />
+<text x="50.0" y="65.0" font-size="15" text-anchor="middle" dominant-baseline="central" fill="white" font-weight="bold">69.78</text>
+<circle cx="150.0" cy="65.0" r="7.53" fill="#a143b4" stroke="black" />
+<text x="150.0" y="52.474367866530294" font-size="15" text-anchor="middle" dominant-baseline="baseline" fill="black" font-weight="bold">2.47</text>
+<circle cx="250.0" cy="65.0" r="6.58" fill="#b85b87" stroke="black" />
+<text x="250.0" y="53.41697641777786" font-size="15" text-anchor="middle" dominant-baseline="baseline" fill="black" font-weight="bold">1.89</text>
+<circle cx="350.0" cy="65.0" r="11.32" fill="#d0745a" stroke="black" />
+<text x="350.0" y="48.678592756808925" font-size="15" text-anchor="middle" dominant-baseline="baseline" fill="black" font-weight="bold">5.59</text>
+<circle cx="450.0" cy="65.0" r="3.10" fill="#e78c2d" stroke="black" />
+<text x="450.0" y="56.89673292286651" font-size="15" text-anchor="middle" dominant-baseline="baseline" fill="black" font-weight="bold">0.42</text>
+<circle cx="550.0" cy="65.0" r="2.71" fill="#ffa500" stroke="black" />
+<text x="550.0" y="57.29124642235646" font-size="15" text-anchor="middle" dominant-baseline="baseline" fill="black" font-weight="bold">0.32</text>
+<circle cx="50.0" cy="195.0" r="5.20" fill="#8a2be2" stroke="black" />
+<text x="50.0" y="184.79841724376487" font-size="15" text-anchor="middle" dominant-baseline="baseline" fill="black" font-weight="bold">1.18</text>
+<circle cx="150.0" cy="195.0" r="3.49" fill="#a143b4" stroke="black" />
+<text x="150.0" y="186.51395937768834" font-size="15" text-anchor="middle" dominant-baseline="baseline" fill="black" font-weight="bold">0.53</text>
+<circle cx="250.0" cy="195.0" r="6.08" fill="#b85b87" stroke="black" />
+<text x="250.0" y="183.92414435797346" font-size="15" text-anchor="middle" dominant-baseline="baseline" fill="black" font-weight="bold">1.61</text>
+<circle cx="350.0" cy="195.0" r="4.86" fill="#d0745a" stroke="black" />
+<text x="350.0" y="185.1402590338037" font-size="15" text-anchor="middle" dominant-baseline="baseline" fill="black" font-weight="bold">1.03</text>
+<circle cx="450.0" cy="195.0" r="0.83" fill="#e78c2d" stroke="black" />
+<text x="450.0" y="189.17061698697935" font-size="15" text-anchor="middle" dominant-baseline="baseline" fill="black" font-weight="bold">0.03</text>
+<circle cx="550.0" cy="195.0" r="1.73" fill="#ffa500" stroke="black" />
+<text x="550.0" y="188.27350158126018" font-size="15" text-anchor="middle" dominant-baseline="baseline" fill="black" font-weight="bold">0.13</text>
+<circle cx="50.0" cy="325.0" r="3.71" fill="#8a2be2" stroke="black" />
+<text x="50.0" y="316.2908864070045" font-size="15" text-anchor="middle" dominant-baseline="baseline" fill="black" font-weight="bold">0.6</text>
+<circle cx="150.0" cy="325.0" r="21.11" fill="#a143b4" stroke="black" />
+<text x="150.0" y="325.0" font-size="15" text-anchor="middle" dominant-baseline="central" fill="white" font-weight="bold">19.43</text>
+<circle cx="250.0" cy="325.0" r="2.95" fill="#b85b87" stroke="black" />
+<text x="250.0" y="317.0482042230244" font-size="15" text-anchor="middle" dominant-baseline="baseline" fill="black" font-weight="bold">0.38</text>
+<circle cx="350.0" cy="325.0" r="7.12" fill="#d0745a" stroke="black" />
+<text x="350.0" y="312.8814646570738" font-size="15" text-anchor="middle" dominant-baseline="baseline" fill="black" font-weight="bold">2.21</text>
+<circle cx="450.0" cy="325.0" r="8.01" fill="#e78c2d" stroke="black" />
+<text x="450.0" y="311.98739886095217" font-size="15" text-anchor="middle" dominant-baseline="baseline" fill="black" font-weight="bold">2.8</text>
+<circle cx="550.0" cy="325.0" r="3.49" fill="#ffa500" stroke="black" />
+<text x="550.0" y="316.51395937768837" font-size="15" text-anchor="middle" dominant-baseline="baseline" fill="black" font-weight="bold">0.53</text>
+</g>
+</svg>

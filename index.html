@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dimerization Network as Chemical Classifier</title>
+  <style>
+    body {
+      margin: 0;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 1000px;       /* Fixed overall width */
+      margin: 20px auto;   /* Centers the container with some vertical spacing */
+      padding: 20px;       /* Internal padding */
+      box-sizing: border-box;
+      background-color: rgb(230, 230, 230); /* Light grey background for the face of the page */
+    }
+    h1 {
+      text-align: center; /* Center the main page title */
+    }
+    .main-section {
+      display: flex;
+    }
+    .left-col {
+      width: 60%;
+      padding-right: 10px;
+      box-sizing: border-box;
+    }
+    .right-col {
+      width: 40%;
+      padding-left: 10px;
+      box-sizing: border-box;
+    }
+    .controls {
+      text-align: left;
+      margin-left: 25%;
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+    .controls label {
+      display: block;
+      margin-top: 10px;
+    }
+    .controls input[type="range"] {
+      width: 70%;
+    }
+    figure {
+      margin: 20px 0;
+      text-align: center;
+    }
+    figure img {
+      max-width: 100%;
+      height: auto;
+    }
+    figcaption {
+      text-align: center;
+      font-size: 20px; /* Larger font for titles */
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    figcaption small {
+      display: block;
+      font-size: 16px; /* Larger font for subtitles */
+      color: #666;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dimerization Network as Chemical Classifier</h1>
+    <div class="main-section">
+      <!-- Left Column: Controls, Output fugacities and Evolved network -->
+      <div class="left-col">
+        <figure style="width: 70%; margin: 0 auto">
+          <figcaption>Input Cocktails</figcaption>
+          <img id="patternsImg" src="images/patterns1.svg" alt="Input Cocktails">
+        </figure>
+        <div class="controls">
+          <label for="cocktailSet">Cocktail Set</label>
+          <input type="range" id="cocktailSet" name="cocktailSet" min="1" max="48" step="1" value="1">
+          <span id="cocktailSetValue">1</span>
+          
+          <label for="drift">Drift</label>
+          <input type="range" id="drift" name="drift" min="0" max="3" step="1" value="0">
+          <span id="driftValue">0</span>
+          
+          <label for="noise">Noise/Signal</label>
+          <input type="range" id="noise" name="noise" min="10" max="120" step="5" value="10">
+          <span id="noiseValue">10</span>%
+        </div>
+
+        <figure style="width: 100%">
+          <figcaption>Output fugacities<br><small>(free concentrations)</small></figcaption>
+          <img id="scatterImg" src="images/scatter_1_0_10.png" alt="Output fugacities">
+        </figure>
+
+      </div>
+      <!-- Right Column: Input Cocktails and Output distributions -->
+      <div class="right-col">
+        <figure style="width: 90%; margin: 0 auto" >
+          <figcaption>Evolved network</figcaption>
+          <img id="cdnImg" src="images/CDN_1_0_10.svg" alt="Evolved network">
+        </figure>
+        <figure>
+          <figcaption>Output distributions<br><small>(I is Mutual Information)</small></figcaption>
+          <img id="histogramImg" src="images/histograms_1_0_10.png" alt="Output distributions">
+        </figure>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Allowed drift values corresponding to slider positions 0, 1, 2, 3
+    const allowedDrift = [0, 2, 4, 8];
+
+    function updateImages() {
+      // Get the current values from the controls
+      const cocktailSet = document.getElementById('cocktailSet').value;
+      const driftIndex = parseInt(document.getElementById('drift').value);
+      const drift = allowedDrift[driftIndex];
+      const noise = document.getElementById('noise').value;
+
+      // Update the displayed numeric values for cocktail set, drift, and noise
+      document.getElementById('cocktailSetValue').innerText = cocktailSet;
+      document.getElementById('driftValue').innerText = drift;
+      document.getElementById('noiseValue').innerText = noise;
+
+      // Dynamically update image source file names based on current controls
+      document.getElementById('patternsImg').src = 'images/patterns' + cocktailSet + '.svg';
+      document.getElementById('scatterImg').src = 'images/scatter_' + cocktailSet + '_' + drift + '_' + noise + '.png';
+      document.getElementById('histogramImg').src = 'images/histograms_' + cocktailSet + '_' + drift + '_' + noise + '.png';
+      document.getElementById('cdnImg').src = 'images/CDN_' + cocktailSet + '_' + drift + '_' + noise + '.svg';
+    }
+
+    // Add event listeners to update images when controls change
+    document.getElementById('cocktailSet').addEventListener('input', updateImages);
+    document.getElementById('drift').addEventListener('input', updateImages);
+    document.getElementById('noise').addEventListener('input', updateImages);
+  </script>
+</body>
+</html>
