@@ -46,6 +46,14 @@
     .controls input[type="range"] {
       width: 70%;
     }
+    /* Container for side-by-side drift and loss controls */
+    .side-by-side {
+      display: flex;
+      justify-content: space-between;
+    }
+    .side-by-side > div {
+      flex: 1;
+    }
     figure {
       margin: 10px 0;
       text-align: center;
@@ -79,13 +87,24 @@
           <img id="patternsImg" src="images/patterns1.svg" alt="Input Cocktails">
         </figure>
         <div class="controls">
+          <div class="side-by-side">
+            <div class="drift-control">
+              <label for="drift">Drift</label>
+              <input type="range" id="drift" name="drift" min="0" max="3" step="1" value="0">
+              <span id="driftValue">0</span>
+            </div>
+            <div class="loss-control">
+              <label for="loss">Loss Function</label>
+              <input type="range" style="width: 30%"" id="loss" name="loss" min="0" max="1" step="1" value="0">
+              <span id="lossValue">Contrast</span>
+            </div>
+          </div>
           <label for="cocktailSet">Cocktail Set</label>
           <input type="range" id="cocktailSet" name="cocktailSet" min="1" max="48" step="1" value="1">
           <span id="cocktailSetValue">1</span>
           
-          <label for="drift">Drift</label>
-          <input type="range" id="drift" name="drift" min="0" max="3" step="1" value="0">
-          <span id="driftValue">0</span>
+          <!-- Drift and Loss sliders side-by-side -->
+
           
           <label for="noise">Noise/Signal</label>
           <input type="range" id="noise" name="noise" min="10" max="120" step="5" value="10">
@@ -96,11 +115,10 @@
           <figcaption>Output fugacities<br><small>(free concentrations)</small></figcaption>
           <img id="scatterImg" src="images/scatter_1_0_10.png" alt="Output fugacities">
         </figure>
-
       </div>
       <!-- Right Column: Input Cocktails and Output distributions -->
       <div class="right-col">
-        <figure style="width: 100%; margin: 0 auto" >
+        <figure style="width: 100%; margin: 0 auto">
           <figcaption>Evolved network</figcaption>
           <img id="cdnImg" src="images/CDN_1_0_10.svg" alt="Evolved network">
         </figure>
@@ -114,28 +132,35 @@
   <script>
     // Allowed drift values corresponding to slider positions 0, 1, 2, 3
     const allowedDrift = [0, 2, 4, 8];
+    const lossOptions = ['Contrast', 'MSE'];
+    const lossIDs = ['_', '_2_F'];
 
     function updateImages() {
       // Get the current values from the controls
       const cocktailSet = document.getElementById('cocktailSet').value;
+      const lossIndex = parseInt(document.getElementById('loss').value);
+      const loss = lossOptions[lossIndex];
+      const ID = lossIDs[lossIndex];
       const driftIndex = parseInt(document.getElementById('drift').value);
       const drift = allowedDrift[driftIndex];
       const noise = document.getElementById('noise').value;
-
-      // Update the displayed numeric values for cocktail set, drift, and noise
+      
+      // Update the displayed values for cocktail set, drift, loss, and noise
       document.getElementById('cocktailSetValue').innerText = cocktailSet;
+      document.getElementById('lossValue').innerText = loss;
       document.getElementById('driftValue').innerText = drift;
       document.getElementById('noiseValue').innerText = noise;
-
-      // Dynamically update image source file names based on current controls
+      
+      // Update image source filenames based on current controls
       document.getElementById('patternsImg').src = 'images/patterns' + cocktailSet + '.svg';
-      document.getElementById('scatterImg').src = 'images/scatter_' + cocktailSet + '_' + drift + '_' + noise + '.png';
-      document.getElementById('histogramImg').src = 'images/histograms_' + cocktailSet + '_' + drift + '_' + noise + '.png';
+      document.getElementById('scatterImg').src = 'images/scatter' + ID + cocktailSet + '_' + drift + '_' + noise + '.png';
+      document.getElementById('histogramImg').src = 'images/histograms' + ID + cocktailSet + '_' + drift + '_' + noise + '.png';
       document.getElementById('cdnImg').src = 'images/CDN_' + cocktailSet + '_' + drift + '_' + noise + '.svg';
     }
-
+    
     // Add event listeners to update images when controls change
     document.getElementById('cocktailSet').addEventListener('input', updateImages);
+    document.getElementById('loss').addEventListener('input', updateImages);
     document.getElementById('drift').addEventListener('input', updateImages);
     document.getElementById('noise').addEventListener('input', updateImages);
   </script>
