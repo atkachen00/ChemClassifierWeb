@@ -87,7 +87,7 @@
             <div class="drift-control">
               <label for="drift">Drift</label>
               <input type="range" id="drift" name="drift" min="0" max="3" step="1" value="0">
-              <span id="driftValue">0</span>
+              <span id="driftValue">0</span>%
             </div>
             <div class="loss-control">
               <label for="loss">Loss Function</label>
@@ -130,7 +130,7 @@
   </div>
   <script>
     // Allowed drift values corresponding to slider positions 0, 1, 2, 3
-    const allowedDrift = [0, 2, 4, 8];
+    const allowedDrift = [0, 4, 8, 16];
     const lossOptions = ['Contrast', 'MSE'];
     const lossIDs = ['_', '_2_F'];
 
@@ -152,9 +152,9 @@
       
       // Update image source filenames based on current controls
       document.getElementById('patternsImg').src = 'images/patterns' + cocktailSet + '.svg';
-      document.getElementById('scatterImg').src = 'images/scatter' + ID + cocktailSet + '_' + drift + '_' + noise + '.png';
-      document.getElementById('histogramImg').src = 'images/histograms' + ID + cocktailSet + '_' + drift + '_' + noise + '.png';
-      document.getElementById('cdnImg').src = 'images/CDN' + ID + cocktailSet + '_' + drift + '_' + noise + '.svg';
+      document.getElementById('scatterImg').src = 'images/scatter' + ID + cocktailSet + '_' + drift/2 + '_' + noise + '.png';
+      document.getElementById('histogramImg').src = 'images/histograms' + ID + cocktailSet + '_' + drift/2 + '_' + noise + '.png';
+      document.getElementById('cdnImg').src = 'images/CDN' + ID + cocktailSet + '_' + drift/2 + '_' + noise + '.svg';
     }
     
     // Add event listeners to update images when controls change

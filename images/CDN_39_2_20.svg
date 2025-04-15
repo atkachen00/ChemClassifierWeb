@@ -6,7 +6,7 @@
 <line x1="168.0" y1="100" x2="440.0" y2="500" stroke="darkgrey" stroke-width="12.00" />
 <line x1="256.0" y1="100" x2="50.0" y2="300" stroke="darkgrey" stroke-width="7.82" />
 <line x1="256.0" y1="100" x2="150.0" y2="300" stroke="darkgrey" stroke-width="9.90" />
-<line x1="256.0" y1="100" x2="300.0" y2="500" stroke="darkgrey" stroke-width="1.17" />
+<line x1="256.0" y1="100" x2="300.0" y2="500" stroke="darkgrey" stroke-width="0.50" />
 <line x1="344.0" y1="100" x2="250.0" y2="300" stroke="darkgrey" stroke-width="12.00" />
 <line x1="432.0" y1="100" x2="450.0" y2="300" stroke="darkgrey" stroke-width="11.81" />
 <line x1="432.0" y1="100" x2="160.0" y2="500" stroke="darkgrey" stroke-width="11.51" />
@@ -14,7 +14,7 @@
 <line x1="520.0" y1="100" x2="350.0" y2="300" stroke="darkgrey" stroke-width="10.33" />
 <line x1="520.0" y1="100" x2="550.0" y2="300" stroke="darkgrey" stroke-width="11.93" />
 <line x1="50.0" y1="300" x2="150.0" y2="300" stroke="darkgrey" stroke-width="11.53" />
-<line x1="150.0" y1="300" x2="160.0" y2="500" stroke="darkgrey" stroke-width="2.51" />
+<line x1="150.0" y1="300" x2="160.0" y2="500" stroke="darkgrey" stroke-width="2.31" />
 <line x1="250.0" y1="300" x2="300.0" y2="500" stroke="darkgrey" stroke-width="12.00" />
 <line x1="350.0" y1="300" x2="160.0" y2="500" stroke="darkgrey" stroke-width="12.00" />
 <line x1="450.0" y1="300" x2="550.0" y2="300" stroke="darkgrey" stroke-width="11.83" />
@@ -24,12 +24,12 @@
 <circle cx="344.0" cy="100" r="25" fill="#d0745a" stroke="black" stroke-width="2" />
 <circle cx="432.0" cy="100" r="25" fill="#e78c2d" stroke="black" stroke-width="2" />
 <circle cx="520.0" cy="100" r="25" fill="#ffa500" stroke="black" stroke-width="2" />
-<circle cx="50.0" cy="300" r="25" fill="#bdbdbd" stroke="black" stroke-width="2" />
-<circle cx="150.0" cy="300" r="25" fill="#c3c3c3" stroke="black" stroke-width="2" />
-<circle cx="250.0" cy="300" r="25" fill="#bfbfbf" stroke="black" stroke-width="2" />
-<circle cx="350.0" cy="300" r="25" fill="#959595" stroke="black" stroke-width="2" />
-<circle cx="450.0" cy="300" r="25" fill="#666666" stroke="black" stroke-width="2" />
-<circle cx="550.0" cy="300" r="25" fill="#b5b5b5" stroke="black" stroke-width="2" />
+<circle cx="50.0" cy="300" r="25" fill="#787878" stroke="black" stroke-width="2" />
+<circle cx="150.0" cy="300" r="25" fill="#787878" stroke="black" stroke-width="2" />
+<circle cx="250.0" cy="300" r="25" fill="#787878" stroke="black" stroke-width="2" />
+<circle cx="350.0" cy="300" r="25" fill="#787878" stroke="black" stroke-width="2" />
+<circle cx="450.0" cy="300" r="25" fill="#787878" stroke="black" stroke-width="2" />
+<circle cx="550.0" cy="300" r="25" fill="#787878" stroke="black" stroke-width="2" />
 <circle cx="160.0" cy="500" r="22" fill="red" stroke="black" stroke-width="2" />
 <text x="160.0" y="504" font-size="26" text-anchor="middle" fill="white" font-weight="bold">x</text>
 <circle cx="300.0" cy="500" r="22" fill="blue" stroke="black" stroke-width="2" />
